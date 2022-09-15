@@ -3,7 +3,14 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Amına goruk Volkan başgaaan'
+                echo "Amını dizine"
+                sh 'echo using shell within Jenkinsfile'
+                echo 'not using shell in the Jenkinsfile'
+            }
+        }
+        stage('Jenkinsfile') {
+            steps {
+                echo 'Ardını dövdürme'
                 sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
             }
         }
