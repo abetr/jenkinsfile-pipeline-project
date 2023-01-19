@@ -1,16 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('echo') {
+        stage('build') {
             steps {
-                echo 'Compiling the java source code'
-                
-            }
-        }
-        stage('run') {
-            steps {
-                echo 'Running the compiled java code.'
-                
+                echo "It works"
+                sh 'echo using shell within Jenkinsfile'
+                echo 'not using shell in the Jenkinsfile'
             }
         }
     }
